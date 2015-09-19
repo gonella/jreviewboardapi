@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.gonella</groupId>
 	<artifactId>jreviewboardapi</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>jreviewboardapi</name>
 	<description>Java API to communicate to review board service</description>
 	<dependencies>
