@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rsp>
+ <stat>ok</stat>
+ <review_request>
+  <status>submitted</status>
+  <last_updated>2011-09-26 13:57:02</last_updated>
+  <description>In order to allow multiple reviewboards on one server, we need to use some form of namespace for our caching. The site domain is good enough. Prepend the domain to the key if the site app exists and a Site object exists for the current site.</description>
+  <links>
+   <diffs>
+    <href>http://demo.reviewboard.org/api/review-requests/46/diffs/</href>
+    <method>GET</method>
+   </diffs>
+   <repository>
+    <href>http://demo.reviewboard.org/api/repositories/2/</href>
+    <method>GET</method>
+    <title>Navi</title>
+   </repository>
+   <screenshots>
+    <href>http://demo.reviewboard.org/api/review-requests/46/screenshots/</href>
+    <method>GET</method>
+   </screenshots>
+   <self>
+    <href>http://demo.reviewboard.org/api/review-requests/46/</href>
+    <method>GET</method>
+   </self>
+   <update>
+    <href>http://demo.reviewboard.org/api/review-requests/46/</href>
+    <method>PUT</method>
+   </update>
+   <last_update>
+    <href>http://demo.reviewboard.org/api/review-requests/46/last-update/</href>
+    <method>GET</method>
+   </last_update>
+   <reviews>
+    <href>http://demo.reviewboard.org/api/review-requests/46/reviews/</href>
+    <method>GET</method>
+   </reviews>
+   <draft>
+    <href>http://demo.reviewboard.org/api/review-requests/46/draft/</href>
+    <method>GET</method>
+   </draft>
+   <file_attachments>
+    <href>http://demo.reviewboard.org/api/review-requests/46/file-attachments/</href>
+    <method>GET</method>
+   </file_attachments>
+   <submitter>
+    <href>http://demo.reviewboard.org/api/users/chipx86/</href>
+    <method>GET</method>
+    <title>chipx86</title>
+   </submitter>
+   <changes>
+    <href>http://demo.reviewboard.org/api/review-requests/46/changes/</href>
+    <method>GET</method>
+   </changes>
+   <delete>
+    <href>http://demo.reviewboard.org/api/review-requests/46/</href>
+    <method>DELETE</method>
+   </delete>
+  </links>
+  <target_groups>
+   <array>
+    <item>
+     <href>http://demo.reviewboard.org/api/groups/reviewboard/</href>
+     <method>GET</method>
+     <title>reviewboard</title>
+    </item>
+   </array>
+  </target_groups>
+  <bugs_closed>
+   <array>
+   </array>
+  </bugs_closed>
+  <changenum>
+  </changenum>
+  <target_people>
+   <array>
+   </array>
+  </target_people>
+  <testing_done></testing_done>
+  <branch>trunk</branch>
+  <id>46</id>
+  <time_added>2007-06-03 14:03:32</time_added>
+  <summary>Prepend the site domain to keys in cache_memoize</summary>
+  <public>1</public>
+ </review_request>
+</rsp>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified">
+	<xs:element name="rsp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="total_results" />
+				<xs:element ref="stat" />
+				<xs:element ref="review_requests" />
+				<xs:element ref="links" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="total_results" type="xs:integer" />
+	<xs:element name="stat" type="xs:NCName" />
+	<xs:element name="review_requests" type="array" />
+	<xs:complexType name="array">
+		<xs:sequence>
+			<xs:element ref="array" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="array">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="item" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="item">
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="href" />
+				<xs:element ref="links" />
+				<xs:element ref="method" />
+				<xs:element ref="repository" />
+				<xs:element ref="title" />
+				<xs:element ref="branch" />
+				<xs:element ref="bugs_closed" />
+				<xs:element ref="changenum" />
+				<xs:element ref="description" />
+				<xs:element ref="id" />
+				<xs:element ref="last_updated" />
+				<xs:element ref="public" />
+				<xs:element ref="status" />
+				<xs:element ref="summary" />
+				<xs:element ref="target_groups" />
+				<xs:element ref="target_people" />
+				<xs:element ref="testing_done" />
+				<xs:element ref="time_added" />
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="branch" type="xs:string" />
+	<xs:element name="bugs_closed" type="array" />
+	<xs:element name="changenum">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="description" type="xs:string" />
+	<xs:element name="id" type="xs:integer" />
+	<xs:element name="last_updated" type="xs:string" />
+	<xs:element name="public" type="xs:integer" />
+	<xs:element name="status" type="xs:NCName" />
+	<xs:element name="summary" type="xs:string" />
+	<xs:element name="target_groups" type="array" />
+	<xs:element name="target_people" type="array" />
+	<xs:element name="testing_done" type="xs:string" />
+	<xs:element name="time_added" type="xs:string" />
+	<xs:element name="links">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" ref="diffs" />
+				<xs:element minOccurs="0" ref="repository" />
+				<xs:element minOccurs="0" ref="screenshots" />
+				<xs:element ref="self" />
+				<xs:choice>
+					<xs:sequence>
+						<xs:element ref="update" />
+						<xs:element ref="last_update" />
+						<xs:element ref="reviews" />
+						<xs:element ref="draft" />
+						<xs:element ref="file_attachments" />
+						<xs:element ref="submitter" />
+						<xs:element ref="changes" />
+						<xs:element ref="delete" />
+					</xs:sequence>
+					<xs:sequence>
+						<xs:element ref="create" />
+						<xs:element ref="next" />
+					</xs:sequence>
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="diffs">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="href" />
+				<xs:element ref="method" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="screenshots">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="href" />
+				<xs:element ref="method" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="self">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="href" />
+				<xs:element ref="method" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="update">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="href" />
+				<xs:element ref="method" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="last_update">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="href" />
+				<xs:element ref="method" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="reviews">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="href" />
+				<xs:element ref="method" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="draft">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="href" />
+				<xs:element ref="method" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="file_attachments">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="href" />
+				<xs:element ref="method" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="submitter">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="href" />
+				<xs:element ref="method" />
+				<xs:element ref="title" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="changes">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="href" />
+				<xs:element ref="method" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="delete">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="href" />
+				<xs:element ref="method" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="create">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="href" />
+				<xs:element ref="method" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="next">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="href" />
+				<xs:element ref="method" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="title" type="xs:string" />
+	<xs:element name="repository">
+		<xs:complexType>
+			<xs:sequence minOccurs="0">
+				<xs:element ref="href" />
+				<xs:element ref="method" />
+				<xs:element ref="title" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="method" type="xs:NCName" />
+	<xs:element name="href" type="xs:anyURI" />
+</xs:schema>
